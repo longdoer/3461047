@@ -1,142 +1,89 @@
-
 <!DOCTYPE html>
-<html lang="zh-Hans">
-<style>
-    html, body {
-        width: 100%;
-        margin: 0;
-    }
-
-    html {
-        height: 100%;
-    }
-
-    body {
-        min-height: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    p {
-        word-break: break-all;
-    }
-
-    @media (max-width: 500px) {
-        h1 {
-            margin-top: 80px;
-        }
-    }
-
-    .flex {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .block {
-        display: block;
-        position: relative;
-    }
-
-    .url {
-        font-size: 18px;
-        padding: 10px 10px 10px 5px;
-        position: relative;
-        width: 300px;
-        border: none;
-        border-bottom: 1px solid #bfbfbf;
-    }
-
-    input:focus {
-        outline: none;
-    }
-
-    .bar {
-        content: '';
-        height: 2px;
-        width: 100%;
-        bottom: 0;
-        position: absolute;
-        background: #00bfb3;
-        transition: 0.2s ease transform;
-        -moz-transition: 0.2s ease transform;
-        -webkit-transition: 0.2s ease transform;
-        transform: scaleX(0);
-    }
-
-    .url:focus ~ .bar {
-        transform: scaleX(1);
-    }
-
-    .btn {
-        line-height: 38px;
-        background-color: #00bfb3;
-        color: #fff;
-        white-space: nowrap;
-        text-align: center;
-        font-size: 14px;
-        border: none;
-        border-radius: 2px;
-        cursor: pointer;
-        padding: 5px;
-        width: 160px;
-        margin: 30px 0;
-    }
-
-    .tips, .example {
-        color: #7b7b7b;
-        position: relative;
-        align-self: flex-start;
-        margin-left: 7.5em;
-    }
-
-    .tips > p:first-child::before {
-        position: absolute;
-        left: -3em;
-        content: 'PS：';
-        color: #7b7b7b
-    }
-
-    .example > p:first-child::before {
-        position: absolute;
-        left: -7.5em;
-        content: '合法输入示例：';
-        color: #7b7b7b
-    }
-</style>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="description" content="github代理加速下载、github代理代理下载。">
-    <script>
-        function toSubmit(e) {
-            e.preventDefault()
-            window.open(location.href.substr(0, location.href.lastIndexOf('/') + 1) + document.getElementsByName('q')[0].value);
-            return false
-        }
-    </script>
-    <title>GitHub 文件加速</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="github代理加速下载、github代理代理下载。">
+    <title>GitHub&#x4EE3;&#x7406;&#x52A0;&#x901F; - 工具箱</title>
+    <link rel="stylesheet" href="https://longdoer.github.io/3461047/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://longdoer.github.io/3461047/css/site.css" />
 </head>
-<body class="flex">
-<h1 style="margin-bottom: 50px"><img src="https://ae01.alicdn.com/kf/H2fc84859291347418b11091fe0e508b8v.png" style="width: 1.5em;margin-right: .2em;vertical-align: bottom;">GitHub 文件加速</h1>
-<form action="./" method="get" style="padding-bottom: 40px" target="_blank" class="flex" onsubmit="toSubmit(event)">
-    <label class="block" style="width: fit-content">
-        <input class="block url" name="q" type="text" placeholder="键入Github文件链接"
-               pattern="^((https|http):\/\/)?(github\.com\/.+?\/.+?\/(?:releases|archive|blob|raw|suites)|((?:raw|gist)\.(?:githubusercontent|github)\.com))\/.+$" required>
-        <div class="bar"></div>
-    </label>
-    <input class="block btn" type="submit" value="下载">
-    <div class="tips"><p>GitHub文件链接带不带协议头都可以，支持release、archive以及文件，右键复制出来的链接都是符合标准的，更多用法、clone加速请参考<a href="https://hunsh.net/archives/23/">这篇文章</a>。</p>
-        <p>release、archive使用cf加速，文件会跳转至JsDelivr</p>
-        <p>注意，不支持项目文件夹</p></div>
-    <div class="example">
-        <p>分支源码：https://github.com/hunshcn/project/archive/master.zip</p>
-        <p>release源码：https://github.com/hunshcn/project/archive/v0.1.0.tar.gz</p>
-        <p>release文件：https://github.com/hunshcn/project/releases/download/v0.1.0/example.zip</p>
-        <p>分支文件：https://github.com/hunshcn/project/blob/master/filename</p>
+<body>
+    <header>
+        <nav b-1zlb0ok14i class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div b-1zlb0ok14i class="container">
+                <a class="navbar-brand" href="/">工具箱</a>
+                <button b-1zlb0ok14i class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span b-1zlb0ok14i class="navbar-toggler-icon"></span>
+                </button>
+                <div b-1zlb0ok14i class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul b-1zlb0ok14i class="navbar-nav flex-grow-1">
+                        <li b-1zlb0ok14i class="nav-item">
+                            <a class="nav-link text-dark" href="/">GitHub加速</a>
+                        </li>
+                        <li b-1zlb0ok14i class="nav-item">
+                            <a b-1zlb0ok14i class="nav-link text-dark" target="_blank" href="https://www.ipicbed.com">免费图床</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div b-1zlb0ok14i class="container">
+        <main b-1zlb0ok14i role="main" class="pb-3">
+            
+<div class="text-center">
+    <img src="https://longdoer.github.io/3461047/images/H2fc84859291347418b11091fe0e508b8v.png" />
+     <h1 class="display-4">GitHub代理加速</h1>
+    <h6>
+        GitHub 文件 , Releases , archive , gist , raw.githubusercontent.com 文件代理加速下载服务.
+    </h6>
+    <form onsubmit="toSubmit(event)" method="get" action="./">
+        <div class="form-group">
+            <input class="form-control" name="url" type="url" placeholder="键入Github文件链接" pattern="^((https|http):\/\/)?(github\.com\/.+?\/.+?\/(?:releases|archive|blob|raw|suites)|((?:raw|gist)\.(?:githubusercontent|github)\.com))\/.+$" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100" style="margin-top:15px">下载</button>
+    </form>
+    <hr />
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">使用说明</h4>
+        <p>
+            分支源码：https://github.com/coreshop/CoreShop/archive/master.zip
+        </p>
+        <p>
+            release源码：https://github.com/coreshop/CoreShop/archive/1.2.zip
+        </p>
+
+        <p>release文件：https://github.com/coreshop/CoreShop/archive/refs/tags/3.0.0-beta.3.zip</p>
+
+        <p>
+            分支文件：https://github.com/coreshop/CoreShop/blob/master/{filename}
+
+        </p>
+        <hr>
+        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
     </div>
-</form>
-</body>
+</div>
+
+        </main>
+    </div>
+    <footer b-g6ltozs93r class="border-top footer text-muted">
+        <div b-g6ltozs93r class="container">
+            &copy; 2022 - 工具箱 - building Web apps with ASP.NET Core
+        </div>
+    </footer>
+
+    <script src="https://longdoer.github.io/3461047/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://longdoer.github.io/3461047/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://longdoer.github.io/3461047/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+
+    
+<script>
+    function toSubmit(e) {
+        e.preventDefault();
+        window.open(location.href.substr(0, location.href.lastIndexOf('/') + 1) + document.getElementsByName('url')[0].value);
+        return false;
+          }
+</script>
 </html>
