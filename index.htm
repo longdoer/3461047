@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub&#x4EE3;&#x7406;&#x52A0;&#x901F; - 工具箱</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c" />
+</head>
+<body>
+    <header>
+        <nav b-1zlb0ok14i class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div b-1zlb0ok14i class="container">
+                <a class="navbar-brand" href="/">工具箱</a>
+                <button b-1zlb0ok14i class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span b-1zlb0ok14i class="navbar-toggler-icon"></span>
+                </button>
+                <div b-1zlb0ok14i class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul b-1zlb0ok14i class="navbar-nav flex-grow-1">
+                        <li b-1zlb0ok14i class="nav-item">
+                            <a class="nav-link text-dark" href="/">GitHub加速</a>
+                        </li>
+                        <li b-1zlb0ok14i class="nav-item">
+                            <a b-1zlb0ok14i class="nav-link text-dark" target="_blank" href="https://www.ipicbed.com">免费图床</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div b-1zlb0ok14i class="container">
+        <main b-1zlb0ok14i role="main" class="pb-3">
+            
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form onsubmit="toSubmit(event)" method="get" action="./">
+        <div class="form-group">
+            <input class="form-control" name="url" type="url" placeholder="键入Github文件链接" pattern="^((https|http):\/\/)?(github\.com\/.+?\/.+?\/(?:releases|archive|blob|raw|suites)|((?:raw|gist)\.(?:githubusercontent|github)\.com))\/.+$" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100" style="margin-top:15px">下载</button>
+    </form>
+    <hr />
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">使用说明</h4>
+        <p>
+            分支源码：https://github.com/coreshop/CoreShop/archive/master.zip
+        </p>
+        <p>
+            release源码：https://github.com/coreshop/CoreShop/archive/1.2.zip
+        </p>
+
+        <p>release文件：https://github.com/coreshop/CoreShop/archive/refs/tags/3.0.0-beta.3.zip</p>
+
+        <p>
+            分支文件：https://github.com/coreshop/CoreShop/blob/master/{filename}
+
+        </p>
+        <hr>
+        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    </div>
+</div>
+
+        </main>
+    </div>
+
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+
+    
+<script>
+    function toSubmit(e) {
+        e.preventDefault();
+        window.open(location.href.substr(0, location.href.lastIndexOf('/') + 1) + document.getElementsByName('url')[0].value);
+        return false;
+          }
+</script>
+</html>
